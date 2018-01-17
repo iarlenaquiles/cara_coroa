@@ -10,7 +10,7 @@ import { Actions } from 'react-native-router-flux';
 
 const logo = require('../imgs/logo.png');
 const btnJogar = require('../imgs/botao_jogar.png');
-const btnSoreJogo = require('../imgs/sobre_jogo.png');
+const btnSobreJogo = require('../imgs/sobre_jogo.png');
 const btnOutrosJogos = require('../imgs/outros_jogos.png');
 
 export default class Principal extends Component {
@@ -19,14 +19,18 @@ export default class Principal extends Component {
       <View style={styles.cenaPrincipal}>
            <View style={styles.apresentacaoJogo}>
               <Image source={logo} />
-              <Image source={btnJogar} />
+              <TouchableHighlight
+                onPress={() => { Actions.resultado(); }}
+              >
+                <Image source={btnJogar} />
+              </TouchableHighlight>
            </View>
 
            <View style={styles.rodape}>
               <TouchableHighlight
                 onPress={() => { Actions.sobrejogo(); }}
               >
-                <Image source={btnSoreJogo} />
+                <Image source={btnSobreJogo} />
               </TouchableHighlight>
 
               <TouchableHighlight
