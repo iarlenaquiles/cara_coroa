@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
 } from 'react-native';
-import { } from 'react-native-router-flux';
+import { Router, Scene } from 'react-native-router-flux';
 
 export default class cara_coroa extends Component {
   render() {
